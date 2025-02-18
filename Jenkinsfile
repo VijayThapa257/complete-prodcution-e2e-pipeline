@@ -9,13 +9,13 @@ pipeline{
     stages{
         stage("clean our workspace"){
             steps{
-                cleanWs{}
+                cleanWs()
             }
         }
 
         stage("checkout from SCM"){
             steps{
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/VijayThapa257/complete-prodcution-e2e-pipeline'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/VijayThapa257/complete-prodcution-e2e-pipeline.git'
             }
         }
     }
